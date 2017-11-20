@@ -1,3 +1,13 @@
 <h1>
   {{title}}
 </h1>
+<ul>
+	<li *ngFor="let hero of heros" (click)="onSelect(hero)" Applight>{{hero.id}}----{{hero.name}}</li>
+</ul>
+<p *ngIf="isShow" (click)="isShow=!isShow">我是不现实的~</p>
+<app-two [num]='count'
+(onVoted)="onVoted($event)"
+></app-two>
+<p>{{prp}}</p>
+<button (click)='get()'>get请求</button>
+ <P>我是远程请求内容:{{ xxx }}</P>
